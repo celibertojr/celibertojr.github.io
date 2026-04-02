@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+.sidebar {
+    width: 250px;
+    background: #111827;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.sidebar a:hover {
+    color: #60a5fa;
+}
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    background: #f4f4f4;
+    width: 100%;
+}
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+header {
+    margin-bottom: 30px;
+}
