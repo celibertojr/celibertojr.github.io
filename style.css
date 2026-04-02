@@ -1,41 +1,180 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
     display: flex;
+    background: #f4f4f4;
+    color: #333;
 }
+
+/* ── Sidebar ── */
 .sidebar {
-    width: 250px;
-    background: #111827;
+    width: 220px;
+    min-width: 220px;
+    background: #1a2332;
     color: white;
-    height: 100vh;
-    padding: 20px;
+    min-height: 100vh;
+    padding: 24px 16px;
     position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
+
 .sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.4;
 }
+
 .sidebar a {
     display: block;
-    color: white;
+    color: #cbd5e1;
     text-decoration: none;
-    margin: 10px 0;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
 }
-.sidebar a:hover {
-    color: #60a5fa;
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #2d3f55;
+    color: #fff;
 }
+
+.menu-label {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 16px;
+    margin-bottom: 2px;
+    padding: 0 8px;
+}
+
+/* ── Main content ── */
 .content {
-    margin-left: 270px;
-    padding: 30px;
-    background: #f4f4f4;
+    margin-left: 220px;
+    padding: 40px;
     width: 100%;
+    max-width: 900px;
 }
+
+/* ── Profile header ── */
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: #ddd;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #1a2332;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.profile-info a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+/* ── Social links ── */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.social-links a {
+    display: inline-block;
+    background: #1a2332;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.social-links a:hover {
+    background: #2563eb;
+}
+
+/* ── Sections ── */
 section {
     background: white;
-    padding: 20px;
+    padding: 24px;
     margin-bottom: 20px;
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
-header {
-    margin-bottom: 30px;
+
+section h2 {
+    font-size: 18px;
+    color: #1a2332;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+section p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+}
+
+section ul {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 2;
+    color: #444;
+}
+
+section ul li {
+    margin-bottom: 4px;
+}
+
+/* ── Simple header (non-home pages) ── */
+header:not(.profile-header) {
+    margin-bottom: 28px;
+}
+
+header:not(.profile-header) h1 {
+    font-size: 26px;
+    color: #1a2332;
 }
